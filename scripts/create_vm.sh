@@ -4,7 +4,7 @@
 set -e
 
 # Load secret blob SAS URL
-source .env
+SCRIPT_URL="$SCRIPT_URL"
 # ----------------------------
 # CONFIG VARIABLES
 # ----------------------------
