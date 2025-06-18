@@ -107,7 +107,7 @@ az vm create \
   --size $VM_SIZE \
   --admin-username $ADMIN_USERNAME \
   --authentication-type ssh \
-  --ssh-key-values $SSH_KEY_PATH \
+  --generate-ssh-keys \
   --public-ip-sku Standard \
   --output table
 
