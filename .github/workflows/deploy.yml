@@ -11,9 +11,13 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
 
+    - name: Export SAS Token as env var
+      run: echo "SCRIPT_URL=${{ secrets.SAS_TOKEN_ENV }}" >> $GITHUB_ENV
+
     - name: Run Deployment Scripts
       run: |
         chmod +x scripts/*.sh
         ./scripts/create_vm.sh
         ./scripts/attach_disk.sh
         ./scripts/userpulse-installer.sh
+
